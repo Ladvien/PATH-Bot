@@ -11,6 +11,7 @@ import UIKit
 class detailViewController: UIViewController {
     @IBOutlet weak var activityName: UILabel!
     @IBOutlet weak var serviceDescriptionTextView: UITextView!
+    @IBOutlet weak var whenToUseDescriptionTextView: UITextView!
 
     
     override func viewDidLoad() {
@@ -26,8 +27,9 @@ class detailViewController: UIViewController {
         //navigationController!.navigationBar.barTintColor = UIColor.greenColor()
         //title = "Activity Details"
         
-        self.activityName.text = "Waahoo!"
+        self.activityName.text = serviceCodes[selectionValue]
         self.serviceDescriptionTextView.text = serviceDescription[selectionValue]
+        self.whenToUseDescriptionTextView.text = whenToUseCode[selectionValue]
         
     }
     

@@ -141,6 +141,7 @@
                     <connections>
                         <outlet property="activityName" destination="doK-SS-4vn" id="xpJ-7v-5VG"/>
                         <outlet property="serviceDescriptionTextView" destination="h5T-nD-Bgz" id="jYp-Je-fQe"/>
+                        <outlet property="whenToUseDescriptionTextView" destination="yTj-bJ-UJm" id="0pU-cA-ybh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1t-1N-cfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
