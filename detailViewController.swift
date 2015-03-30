@@ -9,8 +9,12 @@
 import UIKit
 
 class detailViewController: UIViewController {
+    @IBOutlet weak var activityName: UILabel!
+    @IBOutlet weak var serviceDescriptionTextView: UITextView!
+
     
     override func viewDidLoad() {
+
         
     }
     
@@ -21,9 +25,18 @@ class detailViewController: UIViewController {
         navigationItem.leftBarButtonItem = saveButton
         //navigationController!.navigationBar.barTintColor = UIColor.greenColor()
         //title = "Activity Details"
+        
+        self.activityName.text = "Waahoo!"
+        self.serviceDescriptionTextView.text = serviceDescription[selectionValue]
+        
     }
     
+    
     func saveButton() {
+        // Load the UIViewController, Nib, then push to it.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("mainViewController") as UIViewController
+        navigationController?.popToRootViewControllerAnimated(true)
         println("Yo")
     }
 }
