@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Load cell; set labels to CSV data.
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = serviceCodes[indexPath.row]
-        println(serviceDescription[indexPath.row])
+        //println(serviceDescription[indexPath.row])
         cell.detailTextLabel?.text = serviceDescription[indexPath.row]
 
         return cell
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Load the UIViewController, Nib, then push to it.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("detailViewController") as UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("activityDetailsController") as UIViewController
         navigationController?.pushViewController(vc, animated: true)
         
     }
