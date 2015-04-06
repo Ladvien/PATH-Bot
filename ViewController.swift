@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Setup a blank cell.
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+         self.automaticallyAdjustsScrollViewInsets = false
         
         initSALFile()
     }
@@ -74,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Load the UIViewController, Nib, then push to it.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("activityDetailsController") as UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("addItemView") as UIViewController
         navigationController?.pushViewController(vc, animated: true)
         
     }
