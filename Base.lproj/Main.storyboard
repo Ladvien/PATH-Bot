@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="548.79999999999995" y="330.3866666666666"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Service Code Selector Collection View-->
         <scene sceneID="Sa6-zA-kD8">
             <objects>
-                <collectionViewController providesPresentationContextTransitionStyle="YES" modalTransitionStyle="flipHorizontal" id="jJk-1c-Y3q" customClass="addItemViewController" customModule="PATH_Bot" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="serviceCodeSelectorCollectionView" providesPresentationContextTransitionStyle="YES" modalTransitionStyle="flipHorizontal" id="jJk-1c-Y3q" customClass="serviceCodeSelectorCollectionView" customModule="PATH_Bot" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="ern-hZ-i4D">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="Z0m-ps-aeb">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="Z0m-ps-aeb" customClass="serviceCodeSelectorCell" customModule="PATH_Bot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -131,6 +131,10 @@
                                     <constraint firstItem="M2q-5I-eUF" firstAttribute="top" secondItem="Z0m-ps-aeb" secondAttribute="topMargin" constant="-40" id="oRQ-jF-vDr"/>
                                 </constraints>
                                 <size key="customSize" width="140" height="140"/>
+                                <connections>
+                                    <outlet property="serviceCodeBackgroundView" destination="M2q-5I-eUF" id="gHv-ab-WcP"/>
+                                    <outlet property="serviceCodeLabel" destination="Fkr-IM-ajf" id="16O-7j-JWt"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -139,18 +143,17 @@
                         </connections>
                     </collectionView>
                     <connections>
-                        <outlet property="collectionView" destination="ern-hZ-i4D" id="FHe-QH-2XD"/>
-                        <outlet property="serviceCollectionView" destination="ern-hZ-i4D" id="oA4-Ks-aFD"/>
+                        <outlet property="collectionView" destination="ern-hZ-i4D" id="wWL-Si-SUD"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyy-U7-S3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1421" y="-211"/>
         </scene>
-        <!--Another View Controller-->
+        <!--Service Code Selector View-->
         <scene sceneID="wgA-Lq-Qyd">
             <objects>
-                <viewController storyboardIdentifier="addItemView" id="rCE-YM-WJ3" customClass="anotherViewController" customModule="PATH_Bot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="serviceCodeSelectorView" id="rCE-YM-WJ3" customClass="serviceCodeSelectorView" customModule="PATH_Bot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="arw-SA-JLA"/>
                         <viewControllerLayoutGuide type="bottom" id="UUC-QA-RTD"/>
@@ -174,10 +177,6 @@
                             <constraint firstItem="IgA-4s-Vnx" firstAttribute="leading" secondItem="N2x-8g-yg8" secondAttribute="leadingMargin" id="tLr-Cy-Z5k"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="mainView" destination="N2x-8g-yg8" id="eL1-iV-CJH"/>
-                        <outlet property="serviceCodeContainerView" destination="IgA-4s-Vnx" id="8sC-oi-W5h"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjm-OR-rhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

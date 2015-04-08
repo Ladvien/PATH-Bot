@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Load the UIViewController, Nib, then push to it.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("addItemView") as UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("serviceCodeSelectorView") as UIViewController
         navigationController?.pushViewController(vc, animated: true)
         
     }

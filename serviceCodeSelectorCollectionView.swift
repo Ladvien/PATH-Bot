@@ -8,14 +8,10 @@
 
 import UIKit
 
-class addItemViewController: UICollectionViewController {
-    
-    @IBOutlet var serviceCollectionView: UICollectionView!
-    
+class serviceCodeSelectorCollectionView: UICollectionViewController{
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.serviceCollectionView.setContentOffset(CGPoint(x: 0,y: 0), animated: false)
         self.automaticallyAdjustsScrollViewInsets = false
     }
     
@@ -24,13 +20,14 @@ class addItemViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return serviceCodes.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as serviceCodeSelectorCell
+
+        cell.serviceCodeLabel.text = serviceCodes[indexPath.row]
         return cell
     }
     
